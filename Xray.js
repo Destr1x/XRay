@@ -36,7 +36,7 @@ function hideBlocks(player) {
 }
 
 function restoreBlocks(player) {
-	const dimension = player.dimension;
+    сonst dimension = player.dimension;
     const radius = 10;
     const playerPos = player.location;
 
@@ -60,7 +60,7 @@ function restoreBlocks(player) {
 system.events.beforeItemUse.subscribe(event => {
     const player = event.source;
 
-    if (event.item.id === "minecraft:grass") {
+    if (event.item.id === "minecraft:dirt") {
         if (!state[player.name]) {
             state[player.name] = true;
             hideBlocks(player);
